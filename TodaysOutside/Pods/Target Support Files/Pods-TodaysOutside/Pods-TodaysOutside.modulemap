@@ -1,0 +1,6 @@
+framework module Pods_TodaysOutside {
+  umbrella header "Pods-TodaysOutside-umbrella.h"
+
+  export *
+  module * { export * }
+}
