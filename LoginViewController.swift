@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import AuthenticationServices
 
-class LoginViewController: UIViewController {
-
+class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+    
+    @IBOutlet weak var loginProviderStackView: UIStackView!
+    
     private let loginButton: KOLoginButton = {
         let button = KOLoginButton()
         button.addTarget(self, action: #selector(touchUpLoginButton(_:)), for: .touchUpInside)
@@ -16,13 +22,23 @@ class LoginViewController: UIViewController {
         return button
       }()
 
+    // Apple 로그인
+    func setupProviderLoginView() {
+      let authorizationButton = ASAuthorizationAppleIDButton()
+      authorizationButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
+      self.loginProviderStackView.addArrangedSubview(authorizationButton)
+    }
+    
+    
       override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         layout()
+        setupProviderLoginView()
         print("check")
       }
       
+    // Kakao Login
       @objc private func touchUpLoginButton(_ sender: UIButton) {
         guard let session = KOSession.shared() else {
           return
@@ -48,6 +64,18 @@ class LoginViewController: UIViewController {
         }
       }
 
+    // Apple 로그인 버튼 클릭
+    @objc func handleAuthorizationAppleIDButtonPress() {
+      let appleIDProvider = ASAuthorizationAppleIDProvider()
+      let request = appleIDProvider.createRequest()
+      request.requestedScopes = [.fullName, .email]
+            
+      let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+      authorizationController.delegate = self
+      authorizationController.presentationContextProvider = self
+      authorizationController.performRequests()
+    }
+    
       private func layout() {
         let guide = view.safeAreaLayoutGuide
         view.addSubview(loginButton)
