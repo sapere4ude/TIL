@@ -8,3 +8,4 @@
 2021.02.15 -> 메이커스, 개발 계획 구현(진행중)  
 2021.02.17 -> 이벤트페이지 구현(AF)  
 2021.02.18 -> Objective-C 객체 정의 및 구현 & property, synthesize 사용  
+2021.02.19 -> Objective-C NSString / NSArray / NSDictionary 관련 문법 확인
