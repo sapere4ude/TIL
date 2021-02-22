@@ -9,4 +9,5 @@
 2021.02.17 -> 이벤트페이지 구현(AF)  
 2021.02.18 -> Objective-C 객체 정의 및 구현 & property, synthesize 사용  
 2021.02.19 -> Objective-C NSString / NSArray / NSDictionary 관련 문법 확인  
-2021.02.21 -> home_day 디자인 정리 및 이미지 추가 진행
+2021.02.21 -> home_day 디자인 정리 및 이미지 추가 진행  
+2021.02.22 -> home_day 인포 버튼 이미지, 하트 레이
