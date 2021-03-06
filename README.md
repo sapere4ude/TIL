@@ -20,5 +20,7 @@
 2021.03.02 -> MyTown_5,6 동네 편집(1)  
 2021.03.03 -> MyTown_5,6 동네 편집(2)  
 2021.03.05 -> 개발 회의 참석  
+2021.03.06 -> UICustomViewCell > UITableViewCell 전환 작업  
+
   
 
