@@ -28,7 +28,8 @@
 2021.03.12 -> layout 제약조건 설정 진행(2)  
 2021.03.13 -> Weather 스토리보드 구성  
 2021.03.15 -> UICollectionViewCell 작업(1)    
-2021.03.16 -> UICollectionViewCell 작업(2)    
+2021.03.16 -> UICollectionViewCell 작업(2)  
+2021.03.17 -> UICollectionViewCell 작업(3)     
 
   
 
