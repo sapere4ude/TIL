@@ -29,7 +29,8 @@
 2021.03.13 -> Weather 스토리보드 구성  
 2021.03.15 -> UICollectionViewCell 작업(1)    
 2021.03.16 -> UICollectionViewCell 작업(2)  
-2021.03.17 -> UICollectionViewCell 작업(3)     
+2021.03.17 -> UICollectionViewCell 작업(3)  
+2021.03.20 -> 화면전환 이론공부 (1)     
 
   
 
